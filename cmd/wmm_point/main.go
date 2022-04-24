@@ -11,4 +11,8 @@
 // Information on the model is available at https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml
 //
 // Input required is the location in geodetic latitude and
-// longitude (positive for northern latitudes an
+// longitude (positive for northern latitudes and eastern
+// longitudes), geodetic altitude in meters, and the date of
+// interest in years.
+//
+// The progra
