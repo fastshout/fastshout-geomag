@@ -8,4 +8,7 @@
 // is recomputed every five (5) years, in years divisible by
 // five (i.e. 2010, 2015, 2020).
 //
-// Information on the model is available at https://www.ngdc.noaa.gov
+// Information on the model is available at https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml
+//
+// Input required is the location in geodetic latitude and
+// longitude (positive for northern latitudes an
