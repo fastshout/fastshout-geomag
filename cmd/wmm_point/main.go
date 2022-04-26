@@ -15,4 +15,6 @@
 // longitudes), geodetic altitude in meters, and the date of
 // interest in years.
 //
-// The progra
+// The program computes the estimated Magnetic Declination
+// (Decl) which is sometimes called MagneticVAR, Inclination (Incl), Total
+// Intensity 
