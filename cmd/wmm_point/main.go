@@ -18,4 +18,6 @@
 // The program computes the estimated Magnetic Declination
 // (Decl) which is sometimes called MagneticVAR, Inclination (Incl), Total
 // Intensity (F or TI), Horizontal Intensity (H or HI), Vertical
-// Intensity (Z), and Grid Variation (GV). Declination and 
+// Intensity (Z), and Grid Variation (GV). Declination and Grid
+// Variation are measured in units of degrees and are considered
+// positive when east or north.  Inclination is measu
