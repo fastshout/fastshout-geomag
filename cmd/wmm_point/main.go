@@ -20,4 +20,6 @@
 // Intensity (F or TI), Horizontal Intensity (H or HI), Vertical
 // Intensity (Z), and Grid Variation (GV). Declination and Grid
 // Variation are measured in units of degrees and are considered
-// positive when east or north.  Inclination is measu
+// positive when east or north.  Inclination is measured in units
+// of degrees and is considered positive when pointing down (into
+// the Earth).  The WMM is reference
