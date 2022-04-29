@@ -22,4 +22,6 @@
 // Variation are measured in units of degrees and are considered
 // positive when east or north.  Inclination is measured in units
 // of degrees and is considered positive when pointing down (into
-// the Earth).  The WMM is reference
+// the Earth).  The WMM is referenced to the WGS-84 ellipsoid and
+// is valid for 5 years after the base epoch. Uncertainties for the
+// W
