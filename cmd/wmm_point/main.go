@@ -30,4 +30,5 @@
 // of the horizontal field.  For more information see the WMM Technical
 // Report.
 //
-// It is very impor
+// It is very important to note that a  degree and  order 12 model,
+// such as WMM, describes only the long  wavelength spatial Magne
