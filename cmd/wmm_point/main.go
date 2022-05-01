@@ -38,4 +38,6 @@
 // angular errors at various  positions on the surface (primarily over
 // land, along continental margins and  over oceanic sea-mounts, ridges and
 // trenches) of several degrees may be expected.  Also not included in
-// the model are temporal fluctuations of magneto
+// the model are temporal fluctuations of magnetospheric and ionospheric
+// origin. On the days during and immediately following Magnetic storms,
+// temporal fluctuation
