@@ -24,4 +24,5 @@
 // of degrees and is considered positive when pointing down (into
 // the Earth).  The WMM is referenced to the WGS-84 ellipsoid and
 // is valid for 5 years after the base epoch. Uncertainties for the
-// W
+// WMM are one standard deviation uncertainties averaged over the globe.
+// We represent the uncertainty
