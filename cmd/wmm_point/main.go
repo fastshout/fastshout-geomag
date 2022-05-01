@@ -33,4 +33,6 @@
 // It is very important to note that a  degree and  order 12 model,
 // such as WMM, describes only the long  wavelength spatial Magnetic
 // fluctuations due to  Earth's core.  Not included in the WMM series
-// models are intermediate and short 
+// models are intermediate and short wavelength spatial fluctuations
+// that originate in Earth's mantle and crust. Consequently, isolated
+// angular errors 
