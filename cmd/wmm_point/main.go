@@ -35,4 +35,5 @@
 // fluctuations due to  Earth's core.  Not included in the WMM series
 // models are intermediate and short wavelength spatial fluctuations
 // that originate in Earth's mantle and crust. Consequently, isolated
-// angular errors 
+// angular errors at various  positions on the surface (primarily over
+// land, along continental margins and  over oceanic sea-mounts, 
