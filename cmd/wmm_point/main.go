@@ -36,4 +36,6 @@
 // models are intermediate and short wavelength spatial fluctuations
 // that originate in Earth's mantle and crust. Consequently, isolated
 // angular errors at various  positions on the surface (primarily over
-// land, along continental margins and  over oceanic sea-mounts, 
+// land, along continental margins and  over oceanic sea-mounts, ridges and
+// trenches) of several degrees may be expected.  Also not included in
+// the model are temporal fluctuations of magneto
