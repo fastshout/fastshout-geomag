@@ -31,4 +31,6 @@
 // Report.
 //
 // It is very important to note that a  degree and  order 12 model,
-// such as WMM, describes only the long  wavelength spatial Magne
+// such as WMM, describes only the long  wavelength spatial Magnetic
+// fluctuations due to  Earth's core.  Not included in the WMM series
+// models are intermediate and short 
