@@ -25,4 +25,5 @@
 // the Earth).  The WMM is referenced to the WGS-84 ellipsoid and
 // is valid for 5 years after the base epoch. Uncertainties for the
 // WMM are one standard deviation uncertainties averaged over the globe.
-// We represent the uncertainty
+// We represent the uncertainty as constant values in Incl, F, H, X,
+// Y, and Z. Uncertainty in Declination varies depending on the streng
