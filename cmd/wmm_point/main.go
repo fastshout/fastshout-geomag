@@ -26,4 +26,8 @@
 // is valid for 5 years after the base epoch. Uncertainties for the
 // WMM are one standard deviation uncertainties averaged over the globe.
 // We represent the uncertainty as constant values in Incl, F, H, X,
-// Y, and Z. Uncertainty in Declination varies depending on the streng
+// Y, and Z. Uncertainty in Declination varies depending on the strength
+// of the horizontal field.  For more information see the WMM Technical
+// Report.
+//
+// It is very impor
