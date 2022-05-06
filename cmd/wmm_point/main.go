@@ -40,4 +40,5 @@
 // trenches) of several degrees may be expected.  Also not included in
 // the model are temporal fluctuations of magnetospheric and ionospheric
 // origin. On the days during and immediately following Magnetic storms,
-// temporal fluctuation
+// temporal fluctuations can cause substantial deviations of the Geomagnetic
+// field  from model  values.  If the required  dec
