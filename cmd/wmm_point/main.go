@@ -41,4 +41,6 @@
 // the model are temporal fluctuations of magnetospheric and ionospheric
 // origin. On the days during and immediately following Magnetic storms,
 // temporal fluctuations can cause substantial deviations of the Geomagnetic
-// field  from model  values.  If the required  dec
+// field  from model  values.  If the required  declination accuracy  is
+// more stringent than the WMM  series of models provide, the user is
+// advised to request special (reg
