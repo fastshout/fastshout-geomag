@@ -45,4 +45,5 @@
 // more stringent than the WMM  series of models provide, the user is
 // advised to request special (regional or local) surveys be performed
 // and models prepared. The World Magnetic Model is a joint product of
-// the United St
+// the United States’ National Geospatial-Intelligence Agency (NGA) and
+// the United Kingdom’s Defence Geographic Centre (DGC). The WMM 
