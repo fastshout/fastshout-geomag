@@ -60,4 +60,6 @@
 //  
 //         Main Field             Secular Change
 //         F    =  46944.3 nT ± 152.0 nT  -118.8 nT/yr
-//         H    =  24074.6 nT ± 133.
+//         H    =  24074.6 nT ± 133.0 nT    -6.8 nT/yr
+//         X    =  24060.2 nT ± 138.0 nT    -8.0 nT/yr
+//         Y    =   -831.0 nT ±  89.0 nT   -36
