@@ -46,4 +46,6 @@
 // advised to request special (regional or local) surveys be performed
 // and models prepared. The World Magnetic Model is a joint product of
 // the United States’ National Geospatial-Intelligence Agency (NGA) and
-// the United Kingdom’s Defence Geographic Centre (DGC). The WMM 
+// the United Kingdom’s Defence Geographic Centre (DGC). The WMM was
+// developed jointly by the National Centers for Environmental Information (NCEI, Boulder
+// CO, USA) and 
