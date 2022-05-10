@@ -58,4 +58,6 @@
 //  Altitude:        0.010 kilometers above mean sea level
 //  Date:           2019.5
 //  
-//         Main Field            
+//         Main Field             Secular Change
+//         F    =  46944.3 nT ± 152.0 nT  -118.8 nT/yr
+//         H    =  24074.6 nT ± 133.
