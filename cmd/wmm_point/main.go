@@ -48,4 +48,10 @@
 // the United States’ National Geospatial-Intelligence Agency (NGA) and
 // the United Kingdom’s Defence Geographic Centre (DGC). The WMM was
 // developed jointly by the National Centers for Environmental Information (NCEI, Boulder
-// CO, USA) and 
+// CO, USA) and the British Geological Survey (BGS, Edinburgh, Scotland).
+//
+// Sample output:
+//  Results For
+//  
+//  Latitude:       30.00N
+//  Lo
