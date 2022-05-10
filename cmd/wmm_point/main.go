@@ -65,4 +65,12 @@
 //         Y    =   -831.0 nT ±  89.0 nT   -36.3 nT/yr
 //         Z    =  40301.2 nT ± 165.0 nT  -134.3 nT/yr
 //         Decl =     -1º 59' ± 19'         -5.2'/yr
-//       
+//         Incl =     59º  9' ± 13'         -4.6'/yr
+//  
+//         Grid Variation =  -1º 59'
+package main
+
+import (
+	"bufio"
+	"errors"
+	
