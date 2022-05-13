@@ -73,4 +73,11 @@ package main
 import (
 	"bufio"
 	"errors"
-	
+	"flag"
+	"fmt"
+	"os"
+	"strings"
+
+	"github.com/westphae/geomag/internal/util"
+	"github.com/westphae/geomag/pkg/egm96"
+	"github.com/west
