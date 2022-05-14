@@ -84,4 +84,6 @@ import (
 )
 
 const (
-	usage = "wmm_point --cof_file=WMM2020.COF --spherical [latitude] [lo
+	usage = "wmm_point --cof_file=WMM2020.COF --spherical [latitude] [longitude] [altitude] [date]"
+	cofUsage = "COF coefficients file to use, empty for the built-in one"
+	spheric
