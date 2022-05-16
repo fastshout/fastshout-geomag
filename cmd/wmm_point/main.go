@@ -86,4 +86,5 @@ import (
 const (
 	usage = "wmm_point --cof_file=WMM2020.COF --spherical [latitude] [longitude] [altitude] [date]"
 	cofUsage = "COF coefficients file to use, empty for the built-in one"
-	spheric
+	sphericalUsage = "Output spherical values instead of ellipsoidal"
+	lngErr = "Error: Degree input is outside legal ran
