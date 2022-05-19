@@ -87,4 +87,6 @@ const (
 	usage = "wmm_point --cof_file=WMM2020.COF --spherical [latitude] [longitude] [altitude] [date]"
 	cofUsage = "COF coefficients file to use, empty for the built-in one"
 	sphericalUsage = "Output spherical values instead of ellipsoidal"
-	lngErr = "Error: Degree input is outside legal ran
+	lngErr = "Error: Degree input is outside legal range. The legal range is from -180 to 360."
+	fieldWarn = "Warning: The Horizontal Field strength at this location is only 0.000000. " +
+	
