@@ -92,4 +92,6 @@ const (
 		"Compass readings have VERY LARGE uncertainties in areas where where H is smaller than 1000 nT"
 )
 
-var prompt = 
+var prompt = map[string]string{
+	"latitude": "Please enter latitude North Latitude positive. " +
+		"For example: 30, 30, 30 (D,M,S
