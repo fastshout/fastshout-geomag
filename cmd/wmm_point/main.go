@@ -89,4 +89,7 @@ const (
 	sphericalUsage = "Output spherical values instead of ellipsoidal"
 	lngErr = "Error: Degree input is outside legal range. The legal range is from -180 to 360."
 	fieldWarn = "Warning: The Horizontal Field strength at this location is only 0.000000. " +
-	
+		"Compass readings have VERY LARGE uncertainties in areas where where H is smaller than 1000 nT"
+)
+
+var prompt = 
