@@ -94,4 +94,5 @@ const (
 
 var prompt = map[string]string{
 	"latitude": "Please enter latitude North Latitude positive. " +
-		"For example: 30, 30, 30 (D,M,S
+		"For example: 30, 30, 30 (D,M,S) or 30.508 (Decimal Degrees) (both are north). ",
+	"longitude": "Please enter longitude East longitude positive, West negative.
