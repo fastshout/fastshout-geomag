@@ -99,4 +99,10 @@ var prompt = map[string]string{
 		"For example: -100.5 or -100, 30, 0 for 100.5 degrees west. ",
 	"altitude": "Please enter height above mean sea level (in kilometers). " +
 		"[For height above WGS-84 Ellipsoid prefix E, for example (E20.1)]. ",
-	"date": "Please enter the 
+	"date": "Please enter the decimal year or calendar date (YYYY.yyy, MM DD YYYY or MM/DD/YYYY) ",
+}
+
+var (
+	cofFile    string
+	spherical  bool
+	lati
