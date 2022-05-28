@@ -132,4 +132,8 @@ func main() {
 
 	if cofFile!="" {
 		if err = wmm.LoadWMMCOF(cofFile); err != nil {
-			fmt.Println(
+			fmt.Println(err)
+			return
+		}
+	}
+	fmt.Printf("COF File: %v, Epoch: %v, Valid Date: %d/%d/%d\n", wmm.COFName, wmm
