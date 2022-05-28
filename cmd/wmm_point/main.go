@@ -110,4 +110,11 @@ var (
 	altitude   float64
 	hae        bool
 	dYear      float64
-	ErrHelp    e
+	ErrHelp    error
+	err        error
+	loc        egm96.Location
+	x, y, z    float64
+	dx, dy, dz float64
+)
+
+func ini
