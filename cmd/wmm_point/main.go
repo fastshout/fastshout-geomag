@@ -117,4 +117,8 @@ var (
 	dx, dy, dz float64
 )
 
-func ini
+func init() {
+	flag.StringVar(&cofFile, "cof_file", "", cofUsage)
+	flag.StringVar(&cofFile, "c", "", cofUsage)
+
+	flag.BoolVar
