@@ -121,4 +121,7 @@ func init() {
 	flag.StringVar(&cofFile, "cof_file", "", cofUsage)
 	flag.StringVar(&cofFile, "c", "", cofUsage)
 
-	flag.BoolVar
+	flag.BoolVar(&spherical, "spherical", false, sphericalUsage)
+	flag.BoolVar(&spherical, "s", false, sphericalUsage)
+
+	ErrHelp = errors.
