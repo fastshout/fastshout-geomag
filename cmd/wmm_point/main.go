@@ -124,4 +124,12 @@ func init() {
 	flag.BoolVar(&spherical, "spherical", false, sphericalUsage)
 	flag.BoolVar(&spherical, "s", false, sphericalUsage)
 
-	ErrHelp = errors.
+	ErrHelp = errors.New(usage)
+}
+
+func main() {
+	flag.Parse()
+
+	if cofFile!="" {
+		if err = wmm.LoadWMMCOF(cofFile); err != nil {
+			fmt.Println(
