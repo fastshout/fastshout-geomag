@@ -105,4 +105,9 @@ var prompt = map[string]string{
 var (
 	cofFile    string
 	spherical  bool
-	lati
+	latitude   float64
+	longitude  float64
+	altitude   float64
+	hae        bool
+	dYear      float64
+	ErrHelp    e
