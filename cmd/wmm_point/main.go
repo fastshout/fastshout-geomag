@@ -136,4 +136,9 @@ func main() {
 			return
 		}
 	}
-	fmt.Printf("COF File: %v, Epoch: %v, Valid Date: %d/%d/%d\n", wmm.COFName, wmm
+	fmt.Printf("COF File: %v, Epoch: %v, Valid Date: %d/%d/%d\n", wmm.COFName, wmm.Epoch,
+		wmm.ValidDate.Month(), wmm.ValidDate.Day(), wmm.ValidDate.Year())
+
+	if flag.NArg() == 0 {
+		userInput()
+	} el
