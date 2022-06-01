@@ -141,4 +141,6 @@ func main() {
 
 	if flag.NArg() == 0 {
 		userInput()
-	} el
+	} else if flag.NArg() == 4 {
+		if latitude, err = parsing.ParseLatLng(flag.Arg(0)); err!=nil {
+			_, _ = fmt.Fpri
