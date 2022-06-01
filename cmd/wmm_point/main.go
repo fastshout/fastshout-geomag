@@ -147,4 +147,8 @@ func main() {
 			return
 		}
 		if longitude, err = parsing.ParseLatLng(flag.Arg(1)); err!=nil {
-			_, _ = fmt.Fprintln(
+			_, _ = fmt.Fprintln(os.Stderr, err)
+			return
+		}
+		if altitude, hae, err = parsing.ParseAltitude(flag.Arg(2)); err!=nil {
+			_, _ = fm
