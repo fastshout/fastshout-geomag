@@ -151,4 +151,8 @@ func main() {
 			return
 		}
 		if altitude, hae, err = parsing.ParseAltitude(flag.Arg(2)); err!=nil {
-			_, _ = fm
+			_, _ = fmt.Fprintln(os.Stderr, err)
+			return
+		}
+		if dYear, err = parsing.ParseTime(flag.Arg(3)); err!=nil {
+			_, _ = fmt.Fprintln(
