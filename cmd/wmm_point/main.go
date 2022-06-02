@@ -155,4 +155,8 @@ func main() {
 			return
 		}
 		if dYear, err = parsing.ParseTime(flag.Arg(3)); err!=nil {
-			_, _ = fmt.Fprintln(
+			_, _ = fmt.Fprintln(os.Stderr, err)
+			return
+		}
+	} else {
+		_, _ = fmt.Fprintf(os.Stderr, "You must specify a latitude, longitude, altitude and da
