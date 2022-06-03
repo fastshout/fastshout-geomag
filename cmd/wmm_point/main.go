@@ -159,4 +159,11 @@ func main() {
 			return
 		}
 	} else {
-		_, _ = fmt.Fprintf(os.Stderr, "You must specify a latitude, longitude, altitude and da
+		_, _ = fmt.Fprintf(os.Stderr, "You must specify a latitude, longitude, altitude and date in that order")
+		return
+	}
+	for longitude < 0 {
+		longitude += 360
+	}
+	if longitude >= 360 {
+		
