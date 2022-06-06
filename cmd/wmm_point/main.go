@@ -171,4 +171,7 @@ func main() {
 	altitude *= 1000 // Convert to meters
 
 	if hae {
-		loc = egm96.NewLocationGeodet
+		loc = egm96.NewLocationGeodetic(latitude, longitude, altitude)
+	} else {
+		loc, err = egm96.NewLocationMSL(latitude, longitude, altitude)
+		if err != nil 
