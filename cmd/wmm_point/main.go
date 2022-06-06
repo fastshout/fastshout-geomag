@@ -166,4 +166,9 @@ func main() {
 		longitude += 360
 	}
 	if longitude >= 360 {
-		
+		_, _ = fmt.Fprintln(os.Stderr, lngErr)
+	}
+	altitude *= 1000 // Convert to meters
+
+	if hae {
+		loc = egm96.NewLocationGeodet
