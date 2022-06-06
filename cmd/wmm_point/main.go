@@ -174,4 +174,10 @@ func main() {
 		loc = egm96.NewLocationGeodetic(latitude, longitude, altitude)
 	} else {
 		loc, err = egm96.NewLocationMSL(latitude, longitude, altitude)
-		if err != nil 
+		if err != nil {
+			fmt.Printf("Error making location: %s\n", err)
+		}
+	}
+	mf, err := wmm.CalculateWMMMagneticField(
+		loc,
+		wmm.DecimalYear(dY
