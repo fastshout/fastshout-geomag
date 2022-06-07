@@ -180,4 +180,11 @@ func main() {
 	}
 	mf, err := wmm.CalculateWMMMagneticField(
 		loc,
-		wmm.DecimalYear(dY
+		wmm.DecimalYear(dYear).ToTime(),
+		)
+
+	fmt.Println("Results For")
+	fmt.Println()
+	lat, lng, hh := loc.Geodetic()
+	qualifier := "N"
+	quanti
