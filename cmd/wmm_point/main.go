@@ -187,4 +187,9 @@ func main() {
 	fmt.Println()
 	lat, lng, hh := loc.Geodetic()
 	qualifier := "N"
-	quanti
+	quantity := lat/egm96.Deg
+	if quantity<0 {
+		qualifier = "S"
+		quantity = -quantity
+	}
+	fmt.Printf("Latitude:\t%4.2f%s\n", q
