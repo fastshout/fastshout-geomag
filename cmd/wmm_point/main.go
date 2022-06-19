@@ -192,4 +192,10 @@ func main() {
 		qualifier = "S"
 		quantity = -quantity
 	}
-	fmt.Printf("Latitude:\t%4.2f%s\n", q
+	fmt.Printf("Latitude:\t%4.2f%s\n", quantity, qualifier)
+
+	qualifier = "E"
+	quantity = lng/egm96.Deg
+	if quantity>=180 {
+		qualifier = "W"
+		quantity = 360
