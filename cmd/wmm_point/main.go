@@ -209,4 +209,8 @@ func main() {
 		quantity, _ = loc.HeightAboveMSL()
 		qualifier = "mean sea level"
 	}
-	if quantit
+	if quantity<0 {
+		relationship = "below"
+		quantity = -quantity
+	}
+	fmt.Printf("Altitude:\t%6.3f kilometers %s %s\n", quantity/1000, rela
