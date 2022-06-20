@@ -203,4 +203,10 @@ func main() {
 	fmt.Printf("Longitude:\t%4.2f%s\n", quantity, qualifier)
 
 	relationship := "above"
-	quantity = h
+	quantity = hh
+	qualifier = "the WGS-84 ellipsoid"
+	if !hae {
+		quantity, _ = loc.HeightAboveMSL()
+		qualifier = "mean sea level"
+	}
+	if quantit
