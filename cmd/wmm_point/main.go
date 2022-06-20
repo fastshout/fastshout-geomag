@@ -213,4 +213,10 @@ func main() {
 		relationship = "below"
 		quantity = -quantity
 	}
-	fmt.Printf("Altitude:\t%6.3f kilometers %s %s\n", quantity/1000, rela
+	fmt.Printf("Altitude:\t%6.3f kilometers %s %s\n", quantity/1000, relationship, qualifier)
+
+	fmt.Printf("Date:\t\t%5.1f\n", dYear)
+
+	qualifier = ""
+	if spherical {
+		qualifier = "(Spher
