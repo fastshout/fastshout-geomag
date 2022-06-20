@@ -198,4 +198,9 @@ func main() {
 	quantity = lng/egm96.Deg
 	if quantity>=180 {
 		qualifier = "W"
-		quantity = 360
+		quantity = 360-quantity
+	}
+	fmt.Printf("Longitude:\t%4.2f%s\n", quantity, qualifier)
+
+	relationship := "above"
+	quantity = h
