@@ -219,4 +219,13 @@ func main() {
 
 	qualifier = ""
 	if spherical {
-		qualifier = "(Spher
+		qualifier = "(Spherical)"
+	}
+	fmt.Println()
+
+	if err != nil {
+		fmt.Printf("Warning: %s\n\n", err)
+	}
+
+	if spherical {
+		x, y, z,
