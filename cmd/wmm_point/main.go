@@ -233,4 +233,7 @@ func main() {
 		x, y, z, dx, dy, dz = mf.Ellipsoidal()
 	}
 
-	dD, dM, dS := egm96.Degree
+	dD, dM, dS := egm96.DegreesToDMS(mf.D())
+	iD, iM, iS := egm96.DegreesToDMS(mf.I())
+	gvD, gvM, gvS := egm96.DegreesToDMS(mf.GV(loc))
+	fmt.Println("
