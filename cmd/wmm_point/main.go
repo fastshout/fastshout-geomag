@@ -236,4 +236,5 @@ func main() {
 	dD, dM, dS := egm96.DegreesToDMS(mf.D())
 	iD, iM, iS := egm96.DegreesToDMS(mf.I())
 	gvD, gvM, gvS := egm96.DegreesToDMS(mf.GV(loc))
-	fmt.Println("
+	fmt.Println("       Main Field             Secular Change")
+	fmt.Printf("F    = %8.1f nT ± %5.1f nT  %6.1f nT/yr\n", mf.F(), mf.Er
