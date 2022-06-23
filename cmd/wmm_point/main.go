@@ -228,4 +228,9 @@ func main() {
 	}
 
 	if spherical {
-		x, y, z,
+		x, y, z, dx, dy, dz = mf.Spherical()
+	} else {
+		x, y, z, dx, dy, dz = mf.Ellipsoidal()
+	}
+
+	dD, dM, dS := egm96.Degree
