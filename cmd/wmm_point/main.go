@@ -242,4 +242,5 @@ func main() {
 		fmt.Printf("H    = %8.1f nT ± %5.1f nT  %6.1f nT/yr\n", mf.H(), mf.ErrH(), mf.DH())
 	}
 	fmt.Printf("X    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %s\n", x, mf.ErrX(), dx, qualifier)
-	fmt.Printf("Y    = %8.1f
+	fmt.Printf("Y    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %s\n", y, mf.ErrY(), dy, qualifier)
+	fmt.Printf("Z    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %
