@@ -243,4 +243,6 @@ func main() {
 	}
 	fmt.Printf("X    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %s\n", x, mf.ErrX(), dx, qualifier)
 	fmt.Printf("Y    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %s\n", y, mf.ErrY(), dy, qualifier)
-	fmt.Printf("Z    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %
+	fmt.Printf("Z    = %8.1f nT ± %5.1f nT  %6.1f nT/yr %s\n", z, mf.ErrZ(), dz, qualifier)
+	if !spherical {
+		fmt.Printf("Decl =    %3.0fº %2.0f' ± %2.0f'         %
