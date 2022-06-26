@@ -265,4 +265,12 @@ func userInput() {
 			fmt.Println("Goodbye")
 			os.Exit(1)
 		}
-		latitude, err =
+		latitude, err = parsing.ParseLatLng(input)
+		if err!=nil {
+			fmt.Println(err)
+		}
+	}
+
+	err = fmt.Errorf("")
+	for err!=nil {
+		input 
