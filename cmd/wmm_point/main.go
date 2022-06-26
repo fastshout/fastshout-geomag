@@ -260,4 +260,9 @@ func userInput() {
 
 	err = fmt.Errorf("")
 	for err!=nil {
-		input = readUserI
+		input = readUserInput(prompt["latitude"])
+		if input == "q" {
+			fmt.Println("Goodbye")
+			os.Exit(1)
+		}
+		latitude, err =
