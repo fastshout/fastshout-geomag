@@ -253,3 +253,11 @@ func main() {
 }
 
 func userInput() {
+	var (
+		input string
+		err   error
+	)
+
+	err = fmt.Errorf("")
+	for err!=nil {
+		input = readUserI
