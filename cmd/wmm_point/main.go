@@ -273,4 +273,9 @@ func userInput() {
 
 	err = fmt.Errorf("")
 	for err!=nil {
-		input 
+		input = readUserInput(prompt["longitude"])
+		if input == "q" {
+			fmt.Println("Goodbye")
+			os.Exit(1)
+		}
+		longitude, err = parsin
