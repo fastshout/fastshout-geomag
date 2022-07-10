@@ -278,4 +278,12 @@ func userInput() {
 			fmt.Println("Goodbye")
 			os.Exit(1)
 		}
-		longitude, err = parsin
+		longitude, err = parsing.ParseLatLng(input)
+		if err!=nil {
+			fmt.Println(err)
+		}
+	}
+
+	err = fmt.Errorf("")
+	for err!=nil {
+		input = readUserInput(promp
