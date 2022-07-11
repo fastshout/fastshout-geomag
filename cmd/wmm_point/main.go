@@ -286,4 +286,9 @@ func userInput() {
 
 	err = fmt.Errorf("")
 	for err!=nil {
-		input = readUserInput(promp
+		input = readUserInput(prompt["altitude"])
+		if input == "q" {
+			fmt.Println("Goodbye")
+			os.Exit(1)
+		}
+		altitude, hae, err
