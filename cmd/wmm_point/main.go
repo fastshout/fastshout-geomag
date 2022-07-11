@@ -299,4 +299,9 @@ func userInput() {
 
 	err = fmt.Errorf("")
 	for err!=nil {
-		input
+		input = readUserInput(prompt["date"])
+		if input == "q" {
+			fmt.Println("Goodbye")
+			os.Exit(1)
+		}
+		dYear, err = p
