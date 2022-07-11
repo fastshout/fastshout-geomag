@@ -291,4 +291,12 @@ func userInput() {
 			fmt.Println("Goodbye")
 			os.Exit(1)
 		}
-		altitude, hae, err
+		altitude, hae, err = parsing.ParseAltitude(input)
+		if err!=nil {
+			fmt.Println(err)
+		}
+	}
+
+	err = fmt.Errorf("")
+	for err!=nil {
+		input
