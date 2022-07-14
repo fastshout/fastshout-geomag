@@ -304,4 +304,13 @@ func userInput() {
 			fmt.Println("Goodbye")
 			os.Exit(1)
 		}
-		dYear, err = p
+		dYear, err = parsing.ParseTime(input)
+		if err!=nil {
+			fmt.Println(err)
+		}
+	}
+
+}
+
+func readUserInput(prompt string) (inp string) {
+	reader
