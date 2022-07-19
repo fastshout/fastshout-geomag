@@ -313,4 +313,9 @@ func userInput() {
 }
 
 func readUserInput(prompt string) (inp string) {
-	reader
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print(prompt)
+	inp, _ = reader.ReadString('\n')
+	inp = strings.TrimSpace(inp)
+	return inp
+}
