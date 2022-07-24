@@ -12,4 +12,5 @@ EGM96 defines a "geoid," a gravitational equipotential surface, relative to this
 As an equipotential surface, the geoid also corresponds to Mean Sea Level.
 
 EGM96 is specified as a spherical harmonics series of degree 360.
-The
+The National Geospatial-Intelligence Agency (NGA), which is responsible for the model,
+also publishes a grid of the comput
