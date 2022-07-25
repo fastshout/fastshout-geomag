@@ -13,4 +13,7 @@ As an equipotential surface, the geoid also corresponds to Mean Sea Level.
 
 EGM96 is specified as a spherical harmonics series of degree 360.
 The National Geospatial-Intelligence Agency (NGA), which is responsible for the model,
-also publishes a grid of the comput
+also publishes a grid of the computed geoid heights at a 15'x15' resolution, from which
+the geoid height at any location can be interpolated.
+
+This package calcu
