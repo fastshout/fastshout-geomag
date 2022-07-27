@@ -16,4 +16,5 @@ The National Geospatial-Intelligence Agency (NGA), which is responsible for the 
 also publishes a grid of the computed geoid heights at a 15'x15' resolution, from which
 the geoid height at any location can be interpolated.
 
-This package calcu
+This package calculates the geoid height at any location via interpolation of the NGA grid.
+Currently, a bilinear interpolation is used
