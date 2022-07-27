@@ -17,4 +17,8 @@ also publishes a grid of the computed geoid heights at a 15'x15' resolution, fro
 the geoid height at any location can be interpolated.
 
 This package calculates the geoid height at any location via interpolation of the NGA grid.
-Currently, a bilinear interpolation is used
+Currently, a bilinear interpolation is used.
+
+## Usage
+The most common usage will be to create a location corresponding to
+a GPS-derived latitude, longitude, an
