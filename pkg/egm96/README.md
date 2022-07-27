@@ -21,4 +21,7 @@ Currently, a bilinear interpolation is used.
 
 ## Usage
 The most common usage will be to create a location corresponding to
-a GPS-derived latitude, longitude, an
+a GPS-derived latitude, longitude, and height-above-ellipsoid, and then
+calculate the height above MSL:
+
+	loc := NewLocationGeodetic(-12.25, 82.75, 1050
