@@ -24,4 +24,8 @@ The most common usage will be to create a location corresponding to
 a GPS-derived latitude, longitude, and height-above-ellipsoid, and then
 calculate the height above MSL:
 
-	loc := NewLocationGeodetic(-12.25, 82.75, 1050
+	loc := NewLocationGeodetic(-12.25, 82.75, 10500*Ft)
+	h, err := loc.HeightAboveMSL()
+
+## Testing and Validation
+The heights produced by this program have been validated against online calcu
