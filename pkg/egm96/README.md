@@ -28,4 +28,6 @@ calculate the height above MSL:
 	h, err := loc.HeightAboveMSL()
 
 ## Testing and Validation
-The heights produced by this program have been validated against online calcu
+The heights produced by this program have been validated against online calculator at
+https://www.unavco.org/software/geodetic-utilities/geoid-height-calculator/geoid-height-calculator.html
+
