@@ -17,4 +17,5 @@ func testDiff(name string, actual, expected float64, eps float64, t *testing.T) 
 
 func TestEGM96GridLookup(t *testing.T) {
 	lats := []float64{38, -12.25, -84.75, 26, 0}
-	lngs := []f
+	lngs := []float64{270, 82.75, 180.5, 279.5, 0}
+	hts  := []float64{-30.262, -67.347, -40.254, -26.621, 17.162
