@@ -269,3 +269,5 @@ func loadEGM96Grid() {
 
 	if err := scanner.Err(); err != nil {
 		panic(err)
+	}
+}
