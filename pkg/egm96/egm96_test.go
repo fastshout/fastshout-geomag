@@ -12,4 +12,9 @@ func testDiff(name string, actual, expected float64, eps float64, t *testing.T) 
 		t.Logf("%s correct: expected %8.4f, got %8.4f", name, expected, actual)
 		return
 	}
-	t.Errorf("%s incorrect: expected %8.4f, got %8.4f", name, expecte
+	t.Errorf("%s incorrect: expected %8.4f, got %8.4f", name, expected, actual)
+}
+
+func TestEGM96GridLookup(t *testing.T) {
+	lats := []float64{38, -12.25, -84.75, 26, 0}
+	lngs := []f
