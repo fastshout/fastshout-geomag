@@ -32,4 +32,5 @@ The heights produced by this program have been validated against online calculat
 https://www.unavco.org/software/geodetic-utilities/geoid-height-calculator/geoid-height-calculator.html
 
 ### Copyright
-The EGM96 model and associated data files are produced by the US Government and are not subject to copyrig
+The EGM96 model and associated data files are produced by the US Government and are not subject to copyright.
+The software in this package is provided under the MIT license where applicable.
