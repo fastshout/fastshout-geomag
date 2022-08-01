@@ -152,3 +152,120 @@ func (l Location) HeightAboveMSL() (h float64, err error) {
 	h00 := egm96Grid[nLat*egm96XN+nLng]
 	h10 := egm96Grid[nLat*egm96XN+nLng+1]
 	h01 := egm96Grid[(nLat+1)*egm96XN+nLng]
+	h11 := egm96Grid[(nLat+1)*egm96XN+nLng+1]
+
+	//TODO: implement spline interpolation to improve on bi-linear
+	h = l.height - ((1-x)*(1-y)*h00 + x*(1-y)*h10 + (1-x)*y*h01 + x*y*h11)
+
+	return h, err
+}
+
+var (
+	egm96X0, egm96X1, egm96DX float64
+	egm96Y0, egm96Y1, egm96DY float64
+	egm96XN, egm96YN int
+	egm96Grid []float64
+)
+
+// NearestEGM96GridPoint looks up the grid point nearest the desired location within the
+// 15'x15' resolution grid data for the EGM96 geoid model.
+//
+// The returned Location contains the lat/long of the grid point and the height in meters of
+// the geoid relative to the WGS 84 reference ellipsoid at that grid point.
+//
+// Ignores any height value in the input Location.
+func (l Location) NearestEGM96GridPoint() (loc Location, err error) {
+	if len(egm96Grid)==0 {
+		loadEGM96Grid()
+	}
+
+	lng := l.longitude/Deg
+	for lng<0 {
+		lng += 360
+	}
+	for lng>=360 {
+		lng -= 360
+	}
+	lat := l.latitude/Deg
+	nLng := int((lng-egm96X0)/egm96DX+0.5)
+	nLat := int((lat-egm96Y0)/egm96DY+0.5)
+
+	if nLng < 0 || nLng > egm96XN {
+		return Location{},
+			fmt.Errorf("requested longitude %4.2f lies outside of EGM96 longitude range %4.1f to %4.1f",
+				lng, egm96X0, egm96X1)
+	}
+	if nLat < 0 || nLat > egm96YN {
+		return Location{},
+			fmt.Errorf("requested latitude %4.2f lies outside of EGM96 latitude range %4.1f to %4.1f",
+				lat, egm96Y0, egm96Y1)
+	}
+
+	return Location{
+		latitude:  (egm96Y0+egm96DY*float64(nLat))*Deg,
+		longitude: (egm96X0+egm96DX*float64(nLng))*Deg,
+		height:    egm96Grid[nLat*egm96XN+nLng],
+	}, nil
+}
+
+func loadEGM96Grid() {
+	data, err := getAsset("ww15mgh.grd")
+	if err != nil {
+		panic(err)
+	}
+
+	var (
+		dat []string
+		v   float64
+		i   int
+	)
+
+	scanner := bufio.NewScanner(bytes.NewReader(data))
+	// Read and parse header
+	if !scanner.Scan() {
+		panic("Could not read header line from EGM96 grid file")
+	}
+	dat = strings.Fields(scanner.Text())
+	if egm96Y1, err = strconv.ParseFloat(dat[0], 64); err != nil {
+		panic("bad EGM96 grid file header for Y1")
+	}
+	if egm96Y0, err = strconv.ParseFloat(dat[1], 64); err != nil {
+		panic("bad EGM96 grid file header for Y0")
+	}
+	if egm96X0, err = strconv.ParseFloat(dat[2], 64); err != nil {
+		panic("bad EGM96 grid file header for X0")
+	}
+	if egm96X1, err = strconv.ParseFloat(dat[3], 64); err != nil {
+		panic("bad EGM96 grid file header for X1")
+	}
+	if egm96DX, err = strconv.ParseFloat(dat[4], 64); err != nil {
+		panic("bad EGM96 grid file header for DX")
+	}
+	if egm96DY, err = strconv.ParseFloat(dat[5], 64); err != nil {
+		panic("bad EGM96 grid file header for DY")
+	}
+
+	if egm96X1 < egm96X0 {
+		egm96DX *= -1
+	}
+	if egm96Y1 < egm96Y0 {
+		egm96DY *= -1
+	}
+	egm96XN = int((egm96X1-egm96X0)/egm96DX+0.5)+1 // Count the ends
+	egm96YN = int((egm96Y1-egm96Y0)/egm96DY+0.5)+1
+	egm96Grid = make([]float64, egm96XN*egm96YN)
+
+	// Read and parse data
+	i = 0
+	for scanner.Scan() {
+		for _, s := range strings.Fields(scanner.Text()) {
+			if v, err = strconv.ParseFloat(s, 64); err != nil {
+				panic("bad EGM96 grid data")
+			}
+			egm96Grid[i] = v
+			i++
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		panic(err)
