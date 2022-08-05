@@ -23,4 +23,6 @@ func TestEGM96GridLookup(t *testing.T) {
 	for i:=0; i<len(lats); i++ {
 		p, _ := NewLocationGeodetic(lats[i],lngs[i],0).NearestEGM96GridPoint()
 
-		testDiff("latitude",
+		testDiff("latitude", p.latitude/Deg, lats[i], eps, t)
+		testDiff("longitude", p.longitude/Deg, lngs[i], eps, t)
+		testDiff("height", p.height, 
