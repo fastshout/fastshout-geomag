@@ -25,4 +25,9 @@ func TestEGM96GridLookup(t *testing.T) {
 
 		testDiff("latitude", p.latitude/Deg, lats[i], eps, t)
 		testDiff("longitude", p.longitude/Deg, lngs[i], eps, t)
-		testDiff("height", p.height, 
+		testDiff("height", p.height, hts[i], eps, t)
+	}
+}
+
+func TestEGM96GridInterpolationAgainstKnown(t *testing.T) {
+	lats := []float64{38, -12.
