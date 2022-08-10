@@ -31,4 +31,5 @@ func TestEGM96GridLookup(t *testing.T) {
 
 func TestEGM96GridInterpolationAgainstKnown(t *testing.T) {
 	lats := []float64{38, -12.25, 0, 38.628155, -14.621217, 46.874319, -23.617446, 38.625473, -0.466744}
-	lngs := []float64{270, 82.75
+	lngs := []float64{270, 82.75, 0, 269.779155, 305.021114, 102.448729, 133.874712, 359.999500, 0.002300}
+	hts  := []float64{-30.262, -67.347, 17.162,
