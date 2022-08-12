@@ -36,4 +36,9 @@ func TestEGM96GridInterpolationAgainstKnown(t *testing.T) {
 
 	for i:=0; i<len(lats); i++ {
 		h, _ := NewLocationGeodetic(lats[i],lngs[i],0).HeightAboveMSL()
-		// 0.1 seems to be the error introduced by bi-linear int
+		// 0.1 seems to be the error introduced by bi-linear interpolation rather than splines
+		testDiff("height", -h, hts[i], 0.1, t)
+	}
+}
+
+func TestNewLocationMSL(t 
