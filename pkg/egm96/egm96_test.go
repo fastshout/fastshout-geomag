@@ -49,4 +49,10 @@ func TestNewLocationMSL(t *testing.T) {
 	for i:=0; i<len(lats); i++ {
 		l, _ := NewLocationMSL(lats[i],lngs[i],hts[i])
 		h, _ := l.HeightAboveMSL()
-		// 0.1 seems to be the error introduced by bi-linear interpolation 
+		// 0.1 seems to be the error introduced by bi-linear interpolation rather than splines
+		testDiff("height", h, hts[i], eps, t)
+	}
+}
+
+func ExampleNearestEGM96GridPoint() {
+	p, _ := NewLoca
