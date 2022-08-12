@@ -47,4 +47,6 @@ func TestNewLocationMSL(t *testing.T) {
 	hts  := []float64{200, -1000, 99999, 12000, 3600, -50, 8800, 1200000, -1111}
 
 	for i:=0; i<len(lats); i++ {
-		l, _ := NewLocationMSL(lats[i],l
+		l, _ := NewLocationMSL(lats[i],lngs[i],hts[i])
+		h, _ := l.HeightAboveMSL()
+		// 0.1 seems to be the error introduced by bi-linear interpolation 
