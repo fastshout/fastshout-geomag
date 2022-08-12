@@ -35,4 +35,5 @@ func TestEGM96GridInterpolationAgainstKnown(t *testing.T) {
 	hts  := []float64{-30.262, -67.347, 17.162, -31.628, -2.969, -43.575, 15.871, 50.066, 17.329}
 
 	for i:=0; i<len(lats); i++ {
-		h, _ := NewLoc
+		h, _ := NewLocationGeodetic(lats[i],lngs[i],0).HeightAboveMSL()
+		// 0.1 seems to be the error introduced by bi-linear int
