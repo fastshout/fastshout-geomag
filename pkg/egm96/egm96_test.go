@@ -55,4 +55,5 @@ func TestNewLocationMSL(t *testing.T) {
 }
 
 func ExampleNearestEGM96GridPoint() {
-	p, _ := NewLoca
+	p, _ := NewLocationGeodetic(-12.25,82.75,0).NearestEGM96GridPoint()
+	fmt.Printf("Lat: %4.2f, Lng: %4.2f, height: %5.3f"
