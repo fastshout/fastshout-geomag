@@ -60,4 +60,6 @@ func ExampleNearestEGM96GridPoint() {
 	// Output: Lat: -12.25, Lng: 82.75, height: -67.347
 }
 
-func ExampleConver
+func ExampleConvertMSLToHeightAboveWGS84() {
+	h, _ := NewLocationGeodetic(-12.25,82.75,1000).HeightAboveMSL()
+	fmt.Printf("height A
