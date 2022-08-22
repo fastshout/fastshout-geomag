@@ -11,4 +11,8 @@ const (
 // to a float-valued degrees amount.
 //
 // If d<0 then must pass m>0 and s>0;
-// if d==0 and m<0 then m
+// if d==0 and m<0 then must pass s>0.
+func DMSToDegrees(d, m, s float64) (dd float64) {
+	var sgn float64 = 1
+	if d<0 {
+		sgn = -
