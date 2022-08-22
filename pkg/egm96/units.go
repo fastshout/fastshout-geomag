@@ -15,4 +15,15 @@ const (
 func DMSToDegrees(d, m, s float64) (dd float64) {
 	var sgn float64 = 1
 	if d<0 {
-		sgn = -
+		sgn = -1
+		d = -d
+	}
+	if d==0 && m<0 {
+		sgn = -1
+		m = -m
+	}
+	return sgn*(d+(m+s/60)/60)
+}
+
+// DegreesToDMS converts float degrees dd to
+// who
