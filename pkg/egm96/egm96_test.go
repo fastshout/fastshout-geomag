@@ -62,4 +62,6 @@ func ExampleNearestEGM96GridPoint() {
 
 func ExampleConvertMSLToHeightAboveWGS84() {
 	h, _ := NewLocationGeodetic(-12.25,82.75,1000).HeightAboveMSL()
-	fmt.Printf("height A
+	fmt.Printf("height Above Ellipsoid: %7.3f", h)
+	// Output: height Above Ellipsoid: 1067.347
+}
