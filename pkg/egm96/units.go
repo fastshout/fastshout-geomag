@@ -7,4 +7,8 @@ const (
 	Ft  = 0.3048              // number of meters per foot
 )
 
-// DMSToDegrees converts integral degrees d, minutes m and seconds s (al
+// DMSToDegrees converts integral degrees d, minutes m and seconds s (all of type float64)
+// to a float-valued degrees amount.
+//
+// If d<0 then must pass m>0 and s>0;
+// if d==0 and m<0 then m
