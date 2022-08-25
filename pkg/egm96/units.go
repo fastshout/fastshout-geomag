@@ -26,4 +26,5 @@ func DMSToDegrees(d, m, s float64) (dd float64) {
 }
 
 // DegreesToDMS converts float degrees dd to
-// who
+// whole degrees d, minutes m and decimal seconds s (all of type float64).
+func DegreesToDMS(dd float64) (d, m, s 
