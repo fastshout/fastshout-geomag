@@ -41,4 +41,7 @@ func DegreesToDMS(dd float64) (d, m, s float64) {
 		return 0, 0, -s
 	}
 	if sgn==-1 && d==0 {
-		return 
+		return 0, -m, s
+	}
+	return sgn*d, m, s
+}
