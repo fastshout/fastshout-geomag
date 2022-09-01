@@ -13,4 +13,5 @@ func TestDegrees(t *testing.T) {
 
 	for i, dd := range dds {
 		d, m, s := DegreesToDMS(dd)
-		t
+		testDiff(fmt.Sprintf("%6.1f° degrees portion", dd), d, ds[i], eps, t)
+		testDiff(fmt.Sprintf("%6.1f° mi
