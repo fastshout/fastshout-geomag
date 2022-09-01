@@ -34,4 +34,11 @@ func DegreesToDMS(dd float64) (d, m, s float64) {
 		dd = -dd
 	}
 	d = float64(int(dd))
-	z := (dd-d)
+	z := (dd-d)*60
+	m = float64(int(z))
+	s = (z-m)*60
+	if sgn==-1 && d==0 && m==0 {
+		return 0, 0, -s
+	}
+	if sgn==-1 && d==0 {
+		return 
