@@ -16,4 +16,8 @@ func TestDegrees(t *testing.T) {
 		testDiff(fmt.Sprintf("%6.1f° degrees portion", dd), d, ds[i], eps, t)
 		testDiff(fmt.Sprintf("%6.1f° minutes portion", dd), m, ms[i], eps*60, t)
 		testDiff(fmt.Sprintf("%6.1f° seconds portion", dd), s, ss[i], eps*60*60, t)
-		ddd := D
+		ddd := DMSToDegrees(d, m, s)
+		testDiff(fmt.Sprintf("%6.1f° to dms and back", dd), ddd, dd, eps, t)
+	}
+
+}
