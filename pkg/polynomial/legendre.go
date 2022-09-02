@@ -7,4 +7,6 @@ type legendreFunctionIndex struct {
 }
 var legendreFunctionCache = make(map[legendreFunctionIndex]Polynomial)
 
-// LegendrePolynomial returns a Polynomial object correspon
+// LegendrePolynomial returns a Polynomial object corresponding to
+// the Legendre Polynomial of degree n.
+// Once calculated initially, the polynomials are cached for faster future
