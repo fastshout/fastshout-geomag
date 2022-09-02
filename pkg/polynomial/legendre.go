@@ -5,4 +5,6 @@ import "math"
 type legendreFunctionIndex struct {
 	n, m int
 }
-var legendreFunctionCache =
+var legendreFunctionCache = make(map[legendreFunctionIndex]Polynomial)
+
+// LegendrePolynomial returns a Polynomial object correspon
