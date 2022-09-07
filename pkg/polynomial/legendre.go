@@ -13,4 +13,8 @@ var legendreFunctionCache = make(map[legendreFunctionIndex]Polynomial)
 func LegendrePolynomial(n int) (p Polynomial) {
 	p.c = make([]float64, n+1)
 	for m:=0; m<=n/2; m++ {
-		p.c[n-2*m]
+		p.c[n-2*m] = Pow(-1, m)/Pow(2, n)
+		p.c[n-2*m] *= FactorialRatioFloat(2*n-2*m, n-m)/float64(Factorial(m)*Factorial(n-2*m))
+	}
+
+	re
