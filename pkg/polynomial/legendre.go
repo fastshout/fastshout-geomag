@@ -17,4 +17,8 @@ func LegendrePolynomial(n int) (p Polynomial) {
 		p.c[n-2*m] *= FactorialRatioFloat(2*n-2*m, n-m)/float64(Factorial(m)*Factorial(n-2*m))
 	}
 
-	re
+	return p
+}
+
+// LegendreFunction evaluates the Associated Legendre Function at the given value.
+// Normalization is
