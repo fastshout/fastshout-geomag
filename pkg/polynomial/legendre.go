@@ -26,4 +26,8 @@ func LegendreFunction(n, m int, x float64) (v float64) {
 	p, ok := legendreFunctionCache[legendreFunctionIndex{n,m}]
 	if !ok {
 		p = LegendrePolynomial(n).Derivative(m)
-		lege
+		legendreFunctionCache[legendreFunctionIndex{n,m}] = p
+	}
+
+	return math.Pow(1-x*x, float64(m)/2)*p.Evaluate(x)
+}
