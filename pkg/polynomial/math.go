@@ -10,4 +10,7 @@ func Factorial(n int) (z int) {
 	return 1
 }
 
-// FactorialRatio calculates the ratio of the factorial of the input int
+// FactorialRatio calculates the ratio of the factorial of the input integers.
+// Useful when dividing a large factorial by a smaller factorial, to fit
+// inside an int64.
+// Doesn't handle negative o
