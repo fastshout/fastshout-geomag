@@ -35,4 +35,13 @@ func FactorialRatioFloat(n, m int) (z float64) {
 // Works for any n, positive, negative or 0.
 // Warning: Very inefficient for large n.
 func Pow(x float64, n int) (y float64) {
-	i
+	if n>0 {
+		return x*Pow(x,n-1)
+	}
+
+	if n==0 {
+		return 1
+	}
+
+	return 1/Pow(x,-n)
+}
