@@ -23,4 +23,7 @@ func FactorialRatio(n, m int) (z int) {
 
 // FactorialRatioFloat calculates the ratio of the factorial of the input integers
 // and returns it as a float, to handle large numbers.
-// Doesn't handle negative or large nu
+// Doesn't handle negative or large numbers gracefully, up to user to not pass them.
+func FactorialRatioFloat(n, m int) (z float64) {
+	if n>m {
+		retu
