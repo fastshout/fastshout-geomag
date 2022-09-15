@@ -26,4 +26,10 @@ func FactorialRatio(n, m int) (z int) {
 // Doesn't handle negative or large numbers gracefully, up to user to not pass them.
 func FactorialRatioFloat(n, m int) (z float64) {
 	if n>m {
-		retu
+		return float64(n)*FactorialRatioFloat(n-1, m)
+	}
+	return 1
+}
+
+// Pow raises a float64 to the integer power n.
+// Works for any 
