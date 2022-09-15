@@ -32,4 +32,7 @@ func FactorialRatioFloat(n, m int) (z float64) {
 }
 
 // Pow raises a float64 to the integer power n.
-// Works for any 
+// Works for any n, positive, negative or 0.
+// Warning: Very inefficient for large n.
+func Pow(x float64, n int) (y float64) {
+	i
