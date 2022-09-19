@@ -12,4 +12,8 @@ func NewPolynomial(c []float64) (p Polynomial) {
 }
 
 // Coefficients returns the coefficients of the polynomial in a slice.
-func (p Polynomial) Coeffici
+func (p Polynomial) Coefficients() (c []float64) {
+	return p.c
+}
+
+// Evaluate calculates the value of the polynomial at the given inpu
