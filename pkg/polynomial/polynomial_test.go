@@ -7,4 +7,5 @@ import (
 
 const eps = 1e-6
 
-func testDi
+func testDiff(name string, actual, expected float64, eps float64, t *testing.T) {
+	if actual - expected > -
