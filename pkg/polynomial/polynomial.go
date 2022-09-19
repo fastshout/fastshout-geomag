@@ -24,3 +24,6 @@ func (p Polynomial) Evaluate(x float64) (y float64) {
 
 	return y
 }
+
+// Derivative calculates the polynomial corresponding to the nth derivative of the input polynomial.
+func (p Pol
