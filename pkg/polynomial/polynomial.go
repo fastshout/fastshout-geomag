@@ -26,4 +26,8 @@ func (p Polynomial) Evaluate(x float64) (y float64) {
 }
 
 // Derivative calculates the polynomial corresponding to the nth derivative of the input polynomial.
-func (p Pol
+func (p Polynomial) Derivative(n int) (q Polynomial) {
+	if n==1 {
+		q.c = make([]float64, len(p.c)-1)
+
+		for m := 1;
