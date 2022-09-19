@@ -16,4 +16,11 @@ func (p Polynomial) Coefficients() (c []float64) {
 	return p.c
 }
 
-// Evaluate calculates the value of the polynomial at the given inpu
+// Evaluate calculates the value of the polynomial at the given input value.
+func (p Polynomial) Evaluate(x float64) (y float64) {
+	for m, c := range p.c {
+		y += c*Pow(x, m)
+	}
+
+	return y
+}
