@@ -30,4 +30,13 @@ func (p Polynomial) Derivative(n int) (q Polynomial) {
 	if n==1 {
 		q.c = make([]float64, len(p.c)-1)
 
-		for m := 1;
+		for m := 1; m < len(p.c); m++ {
+			q.c[m-1] = float64(m) * p.c[m]
+		}
+
+		return q
+	}
+
+	q = p
+	for m:=0; m<n; m++ {
+	
