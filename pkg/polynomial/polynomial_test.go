@@ -31,4 +31,9 @@ func TestPow(t *testing.T) {
 func TestFactorial(t *testing.T) {
 	var (
 		ns = []int{20, 19, 5, 3, 4, 0, 1}
-		zs = []int{2432902008176640000, 12164510040
+		zs = []int{2432902008176640000, 121645100408832000, 120, 6, 24, 1, 1}
+	)
+
+	for i:=0; i<len(ns); i++ {
+		z := Factorial(ns[i])
+		testDiff(fmt.Sprintf(
