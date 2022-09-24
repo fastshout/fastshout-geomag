@@ -28,4 +28,7 @@ func TestPow(t *testing.T) {
 	}
 }
 
-func TestFa
+func TestFactorial(t *testing.T) {
+	var (
+		ns = []int{20, 19, 5, 3, 4, 0, 1}
+		zs = []int{2432902008176640000, 12164510040
