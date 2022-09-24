@@ -36,4 +36,9 @@ func TestFactorial(t *testing.T) {
 
 	for i:=0; i<len(ns); i++ {
 		z := Factorial(ns[i])
-		testDiff(fmt.Sprintf(
+		testDiff(fmt.Sprintf("%d!", ns[i]), float64(z), float64(zs[i]), eps, t)
+	}
+}
+
+// FactorialRatioFloat needs to calculate up to 24!
+func TestFac
