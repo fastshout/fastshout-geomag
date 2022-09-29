@@ -41,4 +41,8 @@ func TestFactorial(t *testing.T) {
 }
 
 // FactorialRatioFloat needs to calculate up to 24!
-func TestFac
+func TestFactorialRatioFloat(t *testing.T) {
+	var (
+		ns = []int{6, 6, 6, 6, 3, 3, 1, 24}
+		ms = []int{2, 3, 1, 0, 3, 2, 1, 0}
+		zs
