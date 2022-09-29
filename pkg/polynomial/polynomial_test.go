@@ -45,4 +45,8 @@ func TestFactorialRatioFloat(t *testing.T) {
 	var (
 		ns = []int{6, 6, 6, 6, 3, 3, 1, 24}
 		ms = []int{2, 3, 1, 0, 3, 2, 1, 0}
-		zs
+		zs = []float64{360, 120, 720, 720, 1, 3, 1, 620448401733239439360000}
+	)
+
+	for i:=0; i<len(ns); i++ {
+		z := FactorialRatioFlo
