@@ -68,4 +68,8 @@ func TestEvaluate(t *testing.T) {
 		}
 	)
 
-	for i:=0; 
+	for i:=0; i<len(cs); i++ {
+		for j:=0; j<len(xs); j++ {
+			p := NewPolynomial(cs[i])
+			y := p.Evaluate(xs[j])
+			testDiff(fmt.Sp
