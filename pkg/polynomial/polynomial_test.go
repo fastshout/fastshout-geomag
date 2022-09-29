@@ -49,4 +49,9 @@ func TestFactorialRatioFloat(t *testing.T) {
 	)
 
 	for i:=0; i<len(ns); i++ {
-		z := FactorialRatioFlo
+		z := FactorialRatioFloat(ns[i], ms[i])
+		testDiff(fmt.Sprintf("%d!/%d!", ns[i], ms[i]), z, zs[i], eps, t)
+	}
+}
+
+func TestEva
