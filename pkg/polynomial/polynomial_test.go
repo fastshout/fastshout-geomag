@@ -72,4 +72,9 @@ func TestEvaluate(t *testing.T) {
 		for j:=0; j<len(xs); j++ {
 			p := NewPolynomial(cs[i])
 			y := p.Evaluate(xs[j])
-			testDiff(fmt.Sp
+			testDiff(fmt.Sprintf("Evaluate %v(%3.1f)", cs[i], xs[j]), y, ys[j][i], eps, t)
+		}
+	}
+}
+
+func TestDerivative(t *testin
