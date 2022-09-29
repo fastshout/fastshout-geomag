@@ -54,4 +54,10 @@ func TestFactorialRatioFloat(t *testing.T) {
 	}
 }
 
-func TestEva
+func TestEvaluate(t *testing.T) {
+	var (
+		cs = [][]float64{
+			{-1, 0, 2},
+			{0.5, -1, 1, 2},
+		}
+		xs = []float64{2, 0.
