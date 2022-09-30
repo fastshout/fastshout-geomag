@@ -86,3 +86,14 @@ func TestDerivative(t *testing.T) {
 		ds = [][]float64{
 			{0, 4},
 			{-1, 2, 6},
+		}
+		dds = [][]float64{
+			{4},
+			{2, 12},
+		}
+	)
+
+	for i:=0; i<len(cs); i++ {
+		p := NewPolynomial(cs[i])
+
+	
