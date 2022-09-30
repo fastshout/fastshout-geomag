@@ -109,4 +109,10 @@ func TestDerivative(t *testing.T) {
 }
 
 func TestLegendrePolynomials(t *testing.T) {
-	cs := [][]float6
+	cs := [][]float64{
+		{1},
+		{0, 1},
+		{-1.0/2, 0, 3.0/2},
+		{0, -3.0/2, 0, 5.0/2},
+		{3.0/8, 0, -30.0/8, 0, 35.0/8},
+		{0, 15.0/8, 0, -70.0/8
