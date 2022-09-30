@@ -103,4 +103,10 @@ func TestDerivative(t *testing.T) {
 
 		y = p.Derivative(2).Coefficients()
 		for j, d := range dds[i] {
-			testDiff(fmt.Sprintf("Sec
+			testDiff(fmt.Sprintf("Second derivative of %v", cs[i]), y[j], d, eps, t)
+		}
+	}
+}
+
+func TestLegendrePolynomials(t *testing.T) {
+	cs := [][]float6
