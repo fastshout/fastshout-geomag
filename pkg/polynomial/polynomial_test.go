@@ -96,4 +96,6 @@ func TestDerivative(t *testing.T) {
 	for i:=0; i<len(cs); i++ {
 		p := NewPolynomial(cs[i])
 
-	
+		y := p.Derivative(1).Coefficients()
+		for j, d := range ds[i] {
+			testDiff(fmt.Sprintf("Derivative of %v", cs[i]), y[j], 
