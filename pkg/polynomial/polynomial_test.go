@@ -98,4 +98,9 @@ func TestDerivative(t *testing.T) {
 
 		y := p.Derivative(1).Coefficients()
 		for j, d := range ds[i] {
-			testDiff(fmt.Sprintf("Derivative of %v", cs[i]), y[j], 
+			testDiff(fmt.Sprintf("Derivative of %v", cs[i]), y[j], d, eps, t)
+		}
+
+		y = p.Derivative(2).Coefficients()
+		for j, d := range dds[i] {
+			testDiff(fmt.Sprintf("Sec
