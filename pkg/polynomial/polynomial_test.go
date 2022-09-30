@@ -77,4 +77,12 @@ func TestEvaluate(t *testing.T) {
 	}
 }
 
-func TestDerivative(t *testin
+func TestDerivative(t *testing.T) {
+	var (
+		cs = [][]float64{
+			{-1, 0, 2},
+			{0.5, -1, 1, 2},
+		}
+		ds = [][]float64{
+			{0, 4},
+			{-1, 2, 6},
