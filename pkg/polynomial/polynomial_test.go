@@ -121,4 +121,7 @@ func TestLegendrePolynomials(t *testing.T) {
 		{35.0/128, 0, -1260.0/128, 0, 6930.0/128, 0, -12012.0/128, 0, 6435.0/128},
 	}
 
-	for n, cExpected := ra
+	for n, cExpected := range cs {
+		cCalculated := LegendrePolynomial(n).Coefficients()
+		for j:=0; j<=n; j++ {
+			testDiff(fmt.Sprintf("Order-%d Legend
