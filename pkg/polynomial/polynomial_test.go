@@ -124,4 +124,9 @@ func TestLegendrePolynomials(t *testing.T) {
 	for n, cExpected := range cs {
 		cCalculated := LegendrePolynomial(n).Coefficients()
 		for j:=0; j<=n; j++ {
-			testDiff(fmt.Sprintf("Order-%d Legend
+			testDiff(fmt.Sprintf("Order-%d Legendre Polynomial", n), cCalculated[j], cExpected[j], eps, t)
+		}
+	}
+}
+
+func TestLegendreFun
