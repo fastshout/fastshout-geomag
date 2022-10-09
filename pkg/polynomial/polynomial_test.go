@@ -129,4 +129,7 @@ func TestLegendrePolynomials(t *testing.T) {
 	}
 }
 
-func TestLegendreFun
+func TestLegendreFunctions(t *testing.T) {
+	ns := []int{2, 3, 4, 3, 6, 5, 7}
+	ms := []int{0, 1, 2, 3, 2, 4, 3}
+	xs := []f
