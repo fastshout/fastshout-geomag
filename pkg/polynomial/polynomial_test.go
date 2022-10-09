@@ -132,4 +132,5 @@ func TestLegendrePolynomials(t *testing.T) {
 func TestLegendreFunctions(t *testing.T) {
 	ns := []int{2, 3, 4, 3, 6, 5, 7}
 	ms := []int{0, 1, 2, 3, 2, 4, 3}
-	xs := []f
+	xs := []float64{-0.9, 0.9, 0.15, -0.45, 0.65, 0.85, 0.45}
+	vs := []float64{0.715, 1.994196267, -6.176578125, 10.68285409, -5.414123408,
