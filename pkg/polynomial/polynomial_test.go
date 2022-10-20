@@ -137,4 +137,6 @@ func TestLegendreFunctions(t *testing.T) {
 
 	for i, vExpected := range vs {
 		vCalculated := LegendreFunction(ns[i], ms[i], xs[i])
-		t
+		testDiff(fmt.Sprintf("Legendre function P(%d,%d)", ns[i], ms[i]), vCalculated, vExpected, eps, t)
+	}
+}
