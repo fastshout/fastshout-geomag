@@ -4,4 +4,5 @@ It calculates the various components of the Earth's magnetic field at any
 location and any time within the validity period of the model.
 
 ## The WMM Model
-Th
+The World Magnetic Model (WMM) is a component of the 1984 World Geodetic System (WGS84).
+The WMM homepage is at https://ngdc.noaa.g
