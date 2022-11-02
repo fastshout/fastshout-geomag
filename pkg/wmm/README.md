@@ -15,4 +15,7 @@ such as the total field F, the total horizontal field H,
 the Declination D, the Inclination I, and the Grid Variation (Grivation) GV.
 
 ## Usage
-The most commonly used output would be the Declination D, which is
+The most commonly used output would be the Declination D, which is the
+difference between Magnetic North and True North.
+
+	t := time.Date(2019, 8, 1, 12, 0, 0, 0, time
