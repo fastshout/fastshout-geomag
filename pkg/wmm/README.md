@@ -12,4 +12,7 @@ over a 5-year horizon using a degree and order 12 spherical harmonic expansion.
 It is able to calculate the X, Y, and Z components of the geomagnetic field,
 its rates of change DX, DY, and DZ, and various derived components
 such as the total field F, the total horizontal field H,
-the Declination D, the Inclination I, and the Grid
+the Declination D, the Inclination I, and the Grid Variation (Grivation) GV.
+
+## Usage
+The most commonly used output would be the Declination D, which is
