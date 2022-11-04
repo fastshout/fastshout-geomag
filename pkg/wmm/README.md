@@ -24,4 +24,6 @@ difference between Magnetic North and True North.
 
 ## Testing and Validation
 The outputs produced by this program have been validated against both the
-detailed example provided in se
+detailed example provided in section 1.5 (pp. 14-15) of the paper
+https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015_Report.pdf
+using the 2015v1
