@@ -22,4 +22,6 @@ difference between Magnetic North and True North.
 	loc := NewLocationGeodetic(-12.25, 82.75, 10500*Ft)
 	field, err := CalculateWMMMagneticField(loc, t) 
 
-## T
+## Testing and Validation
+The outputs produced by this program have been validated against both the
+detailed example provided in se
