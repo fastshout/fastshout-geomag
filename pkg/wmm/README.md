@@ -28,4 +28,9 @@ detailed example provided in section 1.5 (pp. 14-15) of the paper
 https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015_Report.pdf
 using the 2015v1 model coefficients (file WMM2015.COF);
 and on the set of test values in section 1.10 (pp. 19-20) using the
-2015v2 model coefficients (file
+2015v2 model coefficients (file WMM2015v2.COF).
+All values matched the values given in the paper to within 0.1nT or
+0.1nT/yr as appropriate.
+
+### Copyright
+T
