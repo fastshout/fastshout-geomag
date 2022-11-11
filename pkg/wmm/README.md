@@ -33,4 +33,5 @@ All values matched the values given in the paper to within 0.1nT or
 0.1nT/yr as appropriate.
 
 ### Copyright
-T
+The WMM model and associated data files are produced by the US Government and are not subject to copyright.
+The software
