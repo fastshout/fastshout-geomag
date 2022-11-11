@@ -26,4 +26,6 @@ difference between Magnetic North and True North.
 The outputs produced by this program have been validated against both the
 detailed example provided in section 1.5 (pp. 14-15) of the paper
 https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2015/WMM2015_Report.pdf
-using the 2015v1
+using the 2015v1 model coefficients (file WMM2015.COF);
+and on the set of test values in section 1.10 (pp. 19-20) using the
+2015v2 model coefficients (file
