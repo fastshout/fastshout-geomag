@@ -34,4 +34,4 @@ All values matched the values given in the paper to within 0.1nT or
 
 ### Copyright
 The WMM model and associated data files are produced by the US Government and are not subject to copyright.
-The software
+The software in this package is provided under the MIT license where applicable.
