@@ -32,4 +32,14 @@ func bindataRead(data []byte, name string) ([]byte, error) {
 		return nil, err
 	}
 
-	return buf.Byte
+	return buf.Bytes(), nil
+}
+
+type asset struct {
+	bytes []byte
+	info  os.FileInfo
+}
+
+type bindataFileInfo struct {
+	name    string
+	siz
