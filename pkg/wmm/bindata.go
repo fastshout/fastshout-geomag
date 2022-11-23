@@ -42,4 +42,10 @@ type asset struct {
 
 type bindataFileInfo struct {
 	name    string
-	siz
+	size    int64
+	mode    os.FileMode
+	modTime time.Time
+}
+
+func (fi bindataFileInfo) Name() string {
+	return fi
