@@ -54,4 +54,9 @@ func (fi bindataFileInfo) Size() int64 {
 	return fi.size
 }
 func (fi bindataFileInfo) Mode() os.FileMode {
-	
+	return fi.mode
+}
+func (fi bindataFileInfo) ModTime() time.Time {
+	return fi.modTime
+}
+func (fi bindataFileInfo) IsDir() bo
