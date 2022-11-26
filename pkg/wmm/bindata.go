@@ -59,4 +59,11 @@ func (fi bindataFileInfo) Mode() os.FileMode {
 func (fi bindataFileInfo) ModTime() time.Time {
 	return fi.modTime
 }
-func (fi bindataFileInfo) IsDir() bo
+func (fi bindataFileInfo) IsDir() bool {
+	return false
+}
+func (fi bindataFileInfo) Sys() interface{} {
+	return nil
+}
+
+var _wmmCof = []byte("\x1f\x8b\x08\x00
