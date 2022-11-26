@@ -48,4 +48,10 @@ type bindataFileInfo struct {
 }
 
 func (fi bindataFileInfo) Name() string {
-	return fi
+	return fi.name
+}
+func (fi bindataFileInfo) Size() int64 {
+	return fi.size
+}
+func (fi bindataFileInfo) Mode() os.FileMode {
+	
