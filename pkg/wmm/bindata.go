@@ -81,4 +81,9 @@ func wmmCof() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "WMM.COF", size: 4557, mode: os.FileMode(416), modTime: 
+	info := bindataFileInfo{name: "WMM.COF", size: 4557, mode: os.FileMode(416), modTime: time.Unix(1575322456, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+// getAsse
