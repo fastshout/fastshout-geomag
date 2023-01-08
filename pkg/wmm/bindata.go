@@ -86,4 +86,6 @@ func wmmCof() (*asset, error) {
 	return a, nil
 }
 
-// getAsse
+// getAsset loads and returns the asset for the given name.
+// It returns an error if the asset could not be found or
+/
