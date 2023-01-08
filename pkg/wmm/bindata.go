@@ -77,4 +77,8 @@ func wmmCofBytes() ([]byte, error) {
 
 func wmmCof() (*asset, error) {
 	bytes, err := wmmCofBytes()
-	if 
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "WMM.COF", size: 4557, mode: os.FileMode(416), modTime: 
