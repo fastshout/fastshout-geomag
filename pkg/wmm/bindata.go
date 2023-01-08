@@ -88,4 +88,6 @@ func wmmCof() (*asset, error) {
 
 // getAsset loads and returns the asset for the given name.
 // It returns an error if the asset could not be found or
-/
+// could not be loaded.
+func getAsset(name string) ([]byte, error) {
+	cannonicalName := strings.Replace(name, "\\", "/", -1)
