@@ -91,3 +91,7 @@ func wmmCof() (*asset, error) {
 // could not be loaded.
 func getAsset(name string) ([]byte, error) {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
+	if f, ok := _bindata[cannonicalName]; ok {
+		a, err := f()
+		if err != nil {
+			return nil, fmt.Errorf("getAsset 
