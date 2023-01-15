@@ -94,4 +94,8 @@ func getAsset(name string) ([]byte, error) {
 	if f, ok := _bindata[cannonicalName]; ok {
 		a, err := f()
 		if err != nil {
-			return nil, fmt.Errorf("getAsset 
+			return nil, fmt.Errorf("getAsset %s can't read by error: %v", name, err)
+		}
+		return a.bytes, nil
+	}
+	return nil, fmt.Errorf("Asset %s not fo
