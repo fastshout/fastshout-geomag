@@ -81,3 +81,62 @@ func LoadWMMCOF(fn string) (err error) {
 	// Read and parse header
 	if !scanner.Scan() {
 		return fmt.Errorf("Could not read header line in WMM coefficient file %s", fn)
+	}
+	dat := strings.Fields(scanner.Text())
+	if epoch, err = strconv.ParseFloat(dat[0], 64); err != nil {
+		return fmt.Errorf("bad header epoch date in WMM coefficient file %s", fn)
+	}
+	Epoch = DecimalYear(epoch)
+	COFName = dat[1]
+	if ValidDate, err = time.Parse("01/02/2006", dat[2]); err != nil {
+		return fmt.Errorf("bad header valid date in WMM coefficient file %s", fn)
+	}
+
+	cGnm = make([][]float64, MaxLegendreOrder+1)
+	cGnm[0] = []float64{0}
+	cHnm = make([][]float64, MaxLegendreOrder+1)
+	cHnm[0] = []float64{0}
+	cDGnm = make([][]float64, MaxLegendreOrder+1)
+	cDGnm[0] = []float64{0}
+	cDHnm = make([][]float64, MaxLegendreOrder+1)
+	cDHnm[0] = []float64{0}
+
+	// Read and parse testdata
+	curN := 0
+	for scanner.Scan() {
+		s := strings.Fields(scanner.Text())
+		if len(s)<6 {
+			continue
+		}
+		if n, err = strconv.Atoi(s[0]); err!=nil {
+			return fmt.Errorf("bad n value in WMM coefficient file %s", fn)
+		}
+		if m, err = strconv.Atoi(s[1]); err!=nil {
+			return fmt.Errorf("bad m value in WMM coefficient file %s", fn)
+		}
+		if n>curN {
+			cGnm[n] = make([]float64, n+1)
+			cHnm[n] = make([]float64, n+1)
+			cDGnm[n] = make([]float64, n+1)
+			cDHnm[n] = make([]float64, n+1)
+			curN = n
+		}
+		if cGnm[n][m], err = strconv.ParseFloat(s[2], 64); err != nil {
+			return fmt.Errorf("bad Gnm value in WMM coefficient file %s", fn)
+		}
+		if cHnm[n][m], err = strconv.ParseFloat(s[3], 64); err != nil {
+			return fmt.Errorf("bad Hnm value in WMM coefficient file %s", fn)
+		}
+		if cDGnm[n][m], err = strconv.ParseFloat(s[4], 64); err != nil {
+			return fmt.Errorf("bad DGnm value in WMM coefficient file %s", fn)
+		}
+		if cDHnm[n][m], err = strconv.ParseFloat(s[5], 64); err != nil {
+			return fmt.Errorf("bad DHnm value in WMM coefficient file %s", fn)
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		return err
+	}
+	return nil
+}
