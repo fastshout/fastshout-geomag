@@ -98,4 +98,8 @@ func getAsset(name string) ([]byte, error) {
 		}
 		return a.bytes, nil
 	}
-	return nil, fmt.Errorf("Asset %s not fo
+	return nil, fmt.Errorf("Asset %s not found", name)
+}
+
+// _bindata is a table, holding each asset generator, mapped to its name.
+var _bindata = map[string]func() (
