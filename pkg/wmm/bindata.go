@@ -102,4 +102,6 @@ func getAsset(name string) ([]byte, error) {
 }
 
 // _bindata is a table, holding each asset generator, mapped to its name.
-var _bindata = map[string]func() (
+var _bindata = map[string]func() (*asset, error){
+	"WMM.COF": wmmCof,
+}
