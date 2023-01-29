@@ -45,3 +45,16 @@ func TestGetWMM2020Coefficients(t *testing.T) {
 		time.Date(2020, 1, 1, 0, 0, 0, 0, time.UTC),
 		time.Date(2021, 1, 1, 0, 0, 0, 0, time.UTC),
 	}
+
+	for j, tt := range ts {
+		for i, nm := range nms {
+			n := nm[0]
+			m := nm[1]
+			g, h, dg, dh, _ := GetWMMCoefficients(n, m, tt)
+			testDiff(fmt.Sprintf("G(%d,%d)", n, m), g, gs[i]+float64(j)*dgs[i], eps, t)
+			testDiff(fmt.Sprintf("H(%d,%d)", n, m), h, hs[i]+float64(j)*dhs[i], eps, t)
+			testDiff(fmt.Sprintf("DG(%d,%d)", n, m), dg, dgs[i], eps, t)
+			testDiff(fmt.Sprintf("DH(%d,%d)", n, m), dh, dhs[i], eps, t)
+		}
+	}
+}
