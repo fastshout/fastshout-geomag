@@ -18,4 +18,5 @@ func (y DecimalYear) ToTime() (t time.Time) {
 	return time.Date(tYear, 1, int(tDay+1), 0, 0, 0, tNanoSeconds, time.UTC)
 }
 
-// Tim
+// TimeToDecimalYears converts a Go time.Time to an epoch-like float64 year like 2015.0.
+// Per document MIL-PRF-89500B Section 
