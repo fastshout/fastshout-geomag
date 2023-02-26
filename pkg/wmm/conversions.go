@@ -12,4 +12,6 @@ type DecimalYear float64
 // and December 31st is 364 for non-leap year. For a leap year, DOY of December 31st is 365."
 func (y DecimalYear) ToTime() (t time.Time) {
 	tYear := int(y)
-	yearDays := float64(time.Date(tYear, 12, 31, 0, 0, 0, 0, time
+	yearDays := float64(time.Date(tYear, 12, 31, 0, 0, 0, 0, time.UTC).YearDay())
+	tDay := (float64(y)-float64(tYear))*yearDays
+	tNanoSeconds := int((tDay - float64(int(tDay)
