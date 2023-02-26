@@ -14,4 +14,8 @@ func (y DecimalYear) ToTime() (t time.Time) {
 	tYear := int(y)
 	yearDays := float64(time.Date(tYear, 12, 31, 0, 0, 0, 0, time.UTC).YearDay())
 	tDay := (float64(y)-float64(tYear))*yearDays
-	tNanoSeconds := int((tDay - float64(int(tDay)
+	tNanoSeconds := int((tDay - float64(int(tDay)))*86400*1e9+0.5)
+	return time.Date(tYear, 1, int(tDay+1), 0, 0, 0, tNanoSeconds, time.UTC)
+}
+
+// Tim
