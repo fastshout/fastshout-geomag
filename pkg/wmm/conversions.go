@@ -21,4 +21,7 @@ func (y DecimalYear) ToTime() (t time.Time) {
 // TimeToDecimalYears converts a Go time.Time to an epoch-like float64 year like 2015.0.
 // Per document MIL-PRF-89500B Section 3.2, "Time is referenced in decimal years
 // (e.g., 15 May 2019 is 2019.367). Note that the day-of-year (DOY) of January 1st is zero
-// and December 31st is 364 for non-leap year. For a leap year, DOY of December 31st 
+// and December 31st is 364 for non-leap year. For a leap year, DOY of December 31st is 365."
+func TimeToDecimalYears(t time.Time) (y DecimalYear) {
+	tYear := t.Year()
+	yearDays := float64(time.Date(tYear, 12, 
