@@ -24,4 +24,6 @@ func (y DecimalYear) ToTime() (t time.Time) {
 // and December 31st is 364 for non-leap year. For a leap year, DOY of December 31st is 365."
 func TimeToDecimalYears(t time.Time) (y DecimalYear) {
 	tYear := t.Year()
-	yearDays := float64(time.Date(tYear, 12, 
+	yearDays := float64(time.Date(tYear, 12, 31, 0, 0, 0, 0, time.UTC).YearDay())
+	tDay := float64(t.YearDay()-1)
+	tSeconds := float64(60*(60*t.Hour()+t.Minute())+t.S
