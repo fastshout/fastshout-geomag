@@ -26,4 +26,6 @@ func TimeToDecimalYears(t time.Time) (y DecimalYear) {
 	tYear := t.Year()
 	yearDays := float64(time.Date(tYear, 12, 31, 0, 0, 0, 0, time.UTC).YearDay())
 	tDay := float64(t.YearDay()-1)
-	tSeconds := float64(60*(60*t.Hour()+t.Minute())+t.S
+	tSeconds := float64(60*(60*t.Hour()+t.Minute())+t.Second())+float64(t.Nanosecond())/1e9
+	return DecimalYear(tYear) + DecimalYear((tDay+tSeconds/86400)/yearDays)
+}
