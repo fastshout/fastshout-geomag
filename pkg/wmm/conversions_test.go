@@ -17,4 +17,8 @@ func TestDecimalYearsToTime(t *testing.T) {
 	}
 	for i, y := range ys {
 		d := y.ToTime()
-		testDiff(fmt.Sprin
+		testDiff(fmt.Sprintf("%5.3f to date", y), float64(ts[i].Unix()), float64(d.Unix()), 1, t)
+	}
+}
+
+func TestTimeToDecimalYears(t *testin
