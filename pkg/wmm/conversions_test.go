@@ -30,4 +30,6 @@ func TestTimeToDecimalYears(t *testing.T) {
 		time.Date(2004, 1, 1, 0, 0, 0, 0, time.UTC),
 		time.Date(2017, 7, 2, 12, 0, 0, 0, time.UTC),
 	}
-	for i
+	for i, tt := range ts {
+		d := TimeToDecimalYears(tt)
+		testDiff(fmt.Sprintf("%v to decimal year", tt), floa
