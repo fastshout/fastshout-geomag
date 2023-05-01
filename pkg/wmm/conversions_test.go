@@ -32,4 +32,9 @@ func TestTimeToDecimalYears(t *testing.T) {
 	}
 	for i, tt := range ts {
 		d := TimeToDecimalYears(tt)
-		testDiff(fmt.Sprintf("%v to decimal year", tt), floa
+		testDiff(fmt.Sprintf("%v to decimal year", tt), float64(d), float64(ys[i]), 0.001, t)
+	}
+}
+
+func TestTimeToDecimalYearRoundTrips(t *testing.T) {
+	ys := []DecimalYear{1995.0, 1996-1.0/365
