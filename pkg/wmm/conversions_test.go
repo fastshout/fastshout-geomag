@@ -46,4 +46,7 @@ func TestTimeToDecimalYearRoundTrips(t *testing.T) {
 		time.Date(2017, 6, 29, 0, 0, 0, 0, time.UTC),
 	}
 	for _, y := range ys {
-		yy := TimeToDecimalYears(y.To
+		yy := TimeToDecimalYears(y.ToTime())
+		testDiff(fmt.Sprintf("%6.3f to time and back", y), float64(yy), float64(y), 0.001, t)
+	}
+	for _,
