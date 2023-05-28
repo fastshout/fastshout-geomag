@@ -82,3 +82,126 @@ func (m MagneticField) H() (h float64) {
 }
 
 // F returns the total strength of the magnetic field.
+//
+// The return value is in nT.
+func (m MagneticField) F() (f float64) {
+	x, y, z, _, _, _ := m.Spherical()
+	return math.Sqrt(x*x + y*y + z*z)
+}
+
+// I returns the Inclination of the magnetic field relative to the WGS84
+// ellipsoid.
+//
+// The inclination is the angle the field makes relative to the horizontal,
+// e.g. at the Magnetic North Pole, the field has a 90 degree inclination
+// and points straight down.
+//
+// The return value is in degrees.
+func (m MagneticField) I() (f float64) {
+	_, _, z, _, _, _ := m.Ellipsoidal()
+	return math.Atan2(z, m.H()) / egm96.Deg
+}
+
+// D returns the Declination of the magnetic field relative to the WGS84
+// ellipsoid.
+//
+// The declination is the angle the field makes relative to True North.
+// This is the most often-used value provided for the WMM for near-Earth
+// navigation.  To convert Magnetic North to True North:
+//  d := field.D()
+//  TrueNorth := Magnetic_North + d
+//
+// The return value is in degrees.
+func (m MagneticField) D() (f float64) {
+	x, y, _, _, _, _ := m.Ellipsoidal()
+	return math.Atan2(y, x) / egm96.Deg
+}
+
+// GV returns the Grid Variation of the magnetic field.
+//
+// It is useful for specifying the magnetic field near the field poles.
+//
+// The return value is in degrees.
+func (m MagneticField) GV(loc egm96.Location) (f float64) {
+	f = m.D()
+	lat, lng, _ := loc.Geodetic()
+	if lat > 55*egm96.Deg {
+		f -= lng / egm96.Deg
+	}
+	if lat < -55*egm96.Deg {
+		f += lng / egm96.Deg
+	}
+	return f
+}
+
+// DH returns the rate of change of the strength of the magnetic field in the
+// horizontal direction, i.e. the component parallel to the WGS84 ellipsoid.
+//
+// The return value is in nT/yr.
+func (m MagneticField) DH() (h float64) {
+	x, y, _, dx, dy, _ := m.Ellipsoidal()
+	return (x*dx + y*dy) / m.H()
+}
+
+// DF returns the rate of change of the total strength of the magnetic field.
+//
+// The return value is in nT/yr.
+func (m MagneticField) DF() (f float64) {
+	x, y, z, dx, dy, dz := m.Ellipsoidal()
+	return (x*dx + y*dy + z*dz) / m.F()
+}
+
+// DI returns the rate of change of the Inclination of the magnetic field
+// relative to the WGS84 ellipsoid.
+//
+// The return value is in degrees/yr.
+func (m MagneticField) DI() (f float64) {
+	f = m.F()
+	_, _, z, _, _, dz := m.Ellipsoidal()
+	return (m.H()*dz - m.DH()*z) / (f * f) / egm96.Deg
+}
+
+// DD returns the rate of change of the Declination of the magnetic field
+// relative to the WGS84 ellipsoid.
+//
+// The return value is in degrees/yr.
+func (m MagneticField) DD() (f float64) {
+	f = m.H()
+	x, y, _, dx, dy, _ := m.Ellipsoidal()
+	return (x*dy - dx*y) / (f * f) / egm96.Deg
+}
+
+// DGV returns the rate of change of the Grid Variation of the magnetic field.
+//
+// The return value is in degrees/yr.
+func (m MagneticField) DGV() (f float64) {
+	return m.DD()
+}
+
+// ErrX returns the uncertainty in the X component of the magnetic field.
+//
+// The WMM specifies this uncertainty as an average over the global surface.
+func (m MagneticField) ErrX() (f float64) {
+	return errX
+}
+
+// ErrY returns the uncertainty in the Y component of the magnetic field.
+//
+// The WMM specifies this uncertainty as an average over the global surface.
+func (m MagneticField) ErrY() (f float64) {
+	return errY
+}
+
+// ErrZ returns the uncertainty in the Z component of the magnetic field.
+//
+// The WMM specifies this uncertainty as an average over the global surface.
+func (m MagneticField) ErrZ() (f float64) {
+	return errZ
+}
+
+// ErrF returns the uncertainty in the total magnetic field F.
+//
+// The WMM specifies this uncertainty as an average over the global surface.
+func (m MagneticField) ErrF() (f float64) {
+	return errF
+}
