@@ -49,4 +49,6 @@ func TestTimeToDecimalYearRoundTrips(t *testing.T) {
 		yy := TimeToDecimalYears(y.ToTime())
 		testDiff(fmt.Sprintf("%6.3f to time and back", y), float64(yy), float64(y), 0.001, t)
 	}
-	for _,
+	for _, s := range ts {
+		tt := TimeToDecimalYears(s).ToTime()
+		testDiff(fmt.Sprintf("%v to decimal year and back", s), floa
