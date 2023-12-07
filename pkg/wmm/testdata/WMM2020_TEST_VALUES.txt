@@ -1,4 +1,9 @@
 # Field 1: Date
 # Field 2: Height above ellipsoid (km)
 # Field 3: geodetic latitude (deg)
-# Field 4: geode
+# Field 4: geodetic longitude (deg)
+# Field 5: declination (deg)
+# Field 6: inclination (deg)
+# Field 7: H (nT)
+# Field 8: X (nT)
+# Field 9
