@@ -1,1 +1,4 @@
-# Fiel
+# Field 1: Date
+# Field 2: Height above ellipsoid (km)
+# Field 3: geodetic latitude (deg)
+# Field 4: geode
