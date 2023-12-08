@@ -6,4 +6,8 @@
 # Field 6: inclination (deg)
 # Field 7: H (nT)
 # Field 8: X (nT)
-# Field 9
+# Field 9: Y (nT)
+# Field 10: Z (nT)
+# Field 11: F (nT)
+# Field 12: dD/dt (deg/year)
+# Field 13: dI/dt (deg/y
