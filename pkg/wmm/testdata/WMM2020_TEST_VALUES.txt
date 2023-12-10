@@ -10,4 +10,9 @@
 # Field 10: Z (nT)
 # Field 11: F (nT)
 # Field 12: dD/dt (deg/year)
-# Field 13: dI/dt (deg/y
+# Field 13: dI/dt (deg/year)
+# Field 14: dH/dt (nT/year)
+# Field 15: dX/dt (nT/year)
+# Field 16: dY/dt (nT/year)
+# Field 17: dZ/dt (nT/year)
+# Field 18: dF/dt (nT/y
