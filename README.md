@@ -4,4 +4,6 @@ The World Magnetic Model home is at https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.
 The coefficients for 2020-2024 can be downloaded at https://www.ngdc.noaa.gov/geomag/WMM/data/WMM2020/WMM2020COF.zip
 
 ## Commands
-fastshout-geomag provide
+fastshout-geomag provides two command line programs, modeled after the command line programs in the official NOAA software.
+
+`w
