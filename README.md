@@ -7,4 +7,7 @@ The coefficients for 2020-2024 can be downloaded at https://www.ngdc.noaa.gov/ge
 fastshout-geomag provides two command line programs, modeled after the command line programs in the official NOAA software.
 
 `wmm_point` calculates magnetic field values for a single location and time.
-The `wmm_grid` function (coming soon) will c
+The `wmm_grid` function (coming soon) will calculate magnetic field values for a grid of locations and/or times.
+
+## Packages
+This library provides two packages: `egm96` and `wmm`. `e
