@@ -10,4 +10,7 @@ fastshout-geomag provides two command line programs, modeled after the command l
 The `wmm_grid` function (coming soon) will calculate magnetic field values for a grid of locations and/or times.
 
 ## Packages
-This library provides two packages: `egm96` and `wmm`. `egm96` represents the 1996 Earth Gravitational Model (EGM96) and `wmm` represents the 2020 World Magnetic Model (WMM). These packages offer capabilities of representing geopotential model of the Earth and magnetic field produced by the Earth'
+This library provides two packages: `egm96` and `wmm`. `egm96` represents the 1996 Earth Gravitational Model (EGM96) and `wmm` represents the 2020 World Magnetic Model (WMM). These packages offer capabilities of representing geopotential model of the Earth and magnetic field produced by the Earth's core respectively.
+
+## Validation
+All library code is fully tested, covering all test values provided with the off
