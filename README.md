@@ -13,4 +13,7 @@ The `wmm_grid` function (coming soon) will calculate magnetic field values for a
 This library provides two packages: `egm96` and `wmm`. `egm96` represents the 1996 Earth Gravitational Model (EGM96) and `wmm` represents the 2020 World Magnetic Model (WMM). These packages offer capabilities of representing geopotential model of the Earth and magnetic field produced by the Earth's core respectively.
 
 ## Validation
-All library code is fully tested, covering all test values provided with the official NOAA WMM, along with the detailed example in the WMM technical paper. Please submit any issues on 
+All library code is fully tested, covering all test values provided with the official NOAA WMM, along with the detailed example in the WMM technical paper. Please submit any issues on GitHub if you notice anomalies.
+
+## Updating Coefficients
+Coefficients are updated via go-bindata conversion of
