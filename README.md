@@ -16,4 +16,6 @@ This library provides two packages: `egm96` and `wmm`. `egm96` represents the 19
 All library code is fully tested, covering all test values provided with the official NOAA WMM, along with the detailed example in the WMM technical paper. Please submit any issues on GitHub if you notice anomalies.
 
 ## Updating Coefficients
-Coefficients are updated via go-bindata conversion of
+Coefficients are updated via go-bindata conversion of coefficient files; the `bindata.go` file should be edited to reflect updated coefficient data.
+
+The WMM source c
