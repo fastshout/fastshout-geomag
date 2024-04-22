@@ -18,4 +18,4 @@ All library code is fully tested, covering all test values provided with the off
 ## Updating Coefficients
 Coefficients are updated via go-bindata conversion of coefficient files; the `bindata.go` file should be edited to reflect updated coefficient data.
 
-The WMM source c
+The WMM source code originates from the public domain and is not protected by copyright: https://www.ngdc.noaa.gov/geomag/WMM/license.shtml.
